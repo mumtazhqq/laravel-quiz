@@ -1,2 +1,2 @@
 # laravel-quiz
-### Simple Quiz Application on Laravel and Vue.js
+### Simple Quiz Application / Laravel and Vue.js
