@@ -16,7 +16,9 @@ class CreateChallangesTable extends Migration
         Schema::create('challanges', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id');
-            $table->integer('answer_id');
+            $table->string('user_name');
+            $table->string('user_email');
+            $table->string('answers');
             $table->timestamps();
         });
     }

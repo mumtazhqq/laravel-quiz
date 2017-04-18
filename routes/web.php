@@ -49,3 +49,5 @@ Route::middleware('contest')->group(function() {
     Route::get('/competition-start', 'HomeController@index');
 
 });
+Route::get('/challange', 'ChallangeController@index');
+Route::post('/challange', 'ChallangeController@store');
