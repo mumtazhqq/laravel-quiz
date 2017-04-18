@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <form action="/app/blog/public/challange" method="post">
+            <form action="/axn/public/challange" method="post">
                 {{ csrf_field() }}
                 @foreach ($questions as $question)
                 <div class="panel panel-default">
@@ -14,7 +14,7 @@
                     <div class="panel-body">
                         <ul>
                             @foreach ($question->answers as $answer)
-                                <input name="question-{{ $question->id }}" value="{{ $answer->body }}" type="radio" id="{{ $answer->id }}">
+                                <input name="question-{{ $question->id }}" value="{{ $answer->body }}" type="radio">
                                 <label for="{{ $answer->id }}">{{ $answer->body }}</label><br>
                             @endforeach
                         </ul>

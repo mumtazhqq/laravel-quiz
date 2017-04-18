@@ -18,7 +18,7 @@ class CreateChallangesTable extends Migration
             $table->integer('user_id');
             $table->string('user_name');
             $table->string('user_email');
-            $table->string('answers');
+            $table->text('answers');
             $table->timestamps();
         });
     }

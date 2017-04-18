@@ -20,7 +20,8 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
-            $table->integer('points');
+            $table->integer('points')->default(0);
+            $table->integer('voted')->default(0);
         });
     }
 

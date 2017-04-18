@@ -28,15 +28,15 @@ Route::get('/rules', function () {
 });
 
 Route::get('/rank', function () {
-
-
-
     return view('rank');
-
 })->name('rank');
 
 Route::get('/prizes', function () {
     return view('prizes');
+});
+
+Route::get('/you-voted', function () {
+    return view('you-voted');
 });
 
 Auth::routes();

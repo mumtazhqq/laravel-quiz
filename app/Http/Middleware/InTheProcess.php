@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Carbon\Carbon;
+use Auth;
 
 class InTheProcess
 {
@@ -25,6 +26,10 @@ class InTheProcess
         // konkurs zakończony
         if (Carbon::parse(config('contest.end'))->lt($now)) {
             return redirect()->route('rank');
+        }
+
+        if (Auth::user()->voted) {
+          return redirect('you-voted');
         }
 
         return $next($request);

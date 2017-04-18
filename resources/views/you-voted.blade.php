@@ -62,9 +62,6 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
-            .table {width: 100%;}
-            .table td { padding:10px; border-bottom: 1px solid #eee;}
-            .table th { padding:10px; border-bottom: 1px solid #eee;}
         </style>
     </head>
     <body>
@@ -81,27 +78,10 @@
             @endif
 
             <div class="content">
-                <table class="table">
-                    <tr>
-                      <th>Nazwa użytkownika</th>
-                      <th>E-mail</th>
-                      <th>Liczba punktów</th>
-                    </tr>
-                    @foreach($users as $user)
-                    <tr>
-                        <td>{{ $user->name }}</td>
-                        <td>{{ $user->email }}</td>
-                        <td>{{ $user->points }}</td>
-                    </tr>
-                  @endforeach
-                </table>
-                @foreach($corrects as $correct)
-                  {{ $correct->body }}
-                @endforeach
-                <hr />
-                @foreach($challanges as $challange)
-                  {{ $challange->answers }}
-                @endforeach
+                <div class="title m-b-md">
+                    JUŻ GŁOSOWAŁEŚ - SPIERDALAJ!
+                </div>
+
             </div>
         </div>
     </body>
